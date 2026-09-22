@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Miguel Capeleti — Sites e Anúncios Animados</title>
+<title>Nexus — Sites e Anúncios Animados</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0F1115;
-    --panel: #171A21;
-    --panel-2: #1E222B;
-    --text: #EDEAE2;
-    --text-dim: #A6A9B2;
-    --accent: #FF5A3C;
-    --accent-2: #33D9BE;
-    --line: #2A2E38;
+    --bg: #0A0A16;
+    --panel: #131428;
+    --panel-2: #191A30;
+    --text: #F1EFFB;
+    --text-dim: #9B9DC4;
+    --accent: #7C5CFC;
+    --accent-2: #B69CFF;
+    --accent-grad: linear-gradient(135deg, #8B6EFF, #6C4CF5);
+    --line: #262842;
     --radius: 4px;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
@@ -62,11 +63,37 @@
     padding: 16px 24px;
   }
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    background: var(--accent-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-mark svg { width: 20px; height: 20px; }
+  .logo-text {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
   }
-  .logo span { color: var(--accent); }
+  .logo-sub {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
   .btn {
     display: inline-flex;
     align-items: center;
@@ -79,7 +106,7 @@
     border: 1px solid transparent;
     transition: transform 0.15s ease, background 0.15s ease;
   }
-  .btn-primary { background: var(--accent); color: #14100D; }
+  .btn-primary { background: var(--accent-grad); color: #FFFFFF; }
   .btn-primary:hover { transform: translateY(-1px); }
   .btn-ghost { border-color: var(--line); color: var(--text); }
   .btn-ghost:hover { border-color: var(--text-dim); }
@@ -274,7 +301,14 @@
 
 <header>
   <div class="header-inner wrap" style="padding-left:0; padding-right:0;">
-    <div class="logo">Miguel <span>Capeleti</span></div>
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 20V4L20 20V4" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text">NEXUS<span class="logo-sub">SOLUÇÕES DIGITAIS</span></div>
+    </div>
     <a class="btn btn-primary" href="https://wa.me/5516996262448" target="_blank" rel="noopener">Chamar no WhatsApp</a>
   </div>
 </header>
@@ -395,7 +429,7 @@
 </section>
 
 <footer class="wrap">
-  <span>Miguel Capeleti — sites e anúncios animados</span>
+  <span>Nexus — sites e anúncios animados</span>
   <span id="year"></span>
 </footer>
 
